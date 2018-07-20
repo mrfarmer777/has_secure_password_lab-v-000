@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
       return head(:forbidden) unless @user.authenticate(params[:password])
       #if you passed the previous step, here's your wristband. Drink away and don't be an idiot.
       session[:user_id] = @user.id
-      redirect user_path(@user)
+      redirect_to user_path(@user)
     else
       redirect_to login_path
     end
