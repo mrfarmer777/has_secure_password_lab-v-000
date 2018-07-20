@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
   #this is like the bouncer, asks for ID, checks against criteria and creates a session (wristband)
 
+  def new
+  end
+
   def create
     #You said you're 'username', huh? Let's see if you're on the list...
     @user=User.find_by(name: params[:name])
