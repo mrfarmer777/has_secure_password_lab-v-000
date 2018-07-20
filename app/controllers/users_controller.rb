@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     #this should be baked in
     @user = User.new(user_params).save
     session[:user_id]=@user.id
-    redirect_to sess
+    redirect_to user_path(@user)
   end
 
   def show
