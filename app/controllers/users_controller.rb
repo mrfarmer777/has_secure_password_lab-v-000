@@ -8,8 +8,7 @@ class UsersController < ApplicationController
     #one of these params is password and password_confirmation, I believe when the User class creates a new
     #user, it will use the has_secure_password macro to create the password digest before actually saving it....
     #this should be baked in
-    @user = User.new(user_params).save
-    redirect_to user_show_path(@user)
+    @user = User.new(user_params).save  
   end
 
   private
