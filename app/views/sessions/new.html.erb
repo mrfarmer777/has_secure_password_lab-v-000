@@ -1,7 +1,7 @@
 <h2>Log in</h2>
 
-<%=form_tag login_path do %>
-  User name: <%=text_field_tag :user[:name]%><br />
-  Password: <%=password_field_tag :user[:password]><br />
+<%=form_for :user, url: login_path do |f| %>
+  User name: <%=f.text_field :name%><br />
+  Password: <%=f.password_field password><br />
   <%=submit_tag%>
 <%end%>
