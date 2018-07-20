@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   #strong params function
   def user_params
     #the form is sending back a user hash within params taht includes username, passowrd, and password_confirmation
-    params.require(:user).permite(:username, :password, :password_confirmation)
+    params.require(:user).permit(:username, :password, :password_confirmation)
   end
 
 end
