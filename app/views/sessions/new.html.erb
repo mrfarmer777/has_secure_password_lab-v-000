@@ -2,6 +2,6 @@
 
 <%=form_for :user, url: login_path do |f| %>
   User name: <%=f.text_field :name%><br />
-  Password: <%=f.password_field password><br />
+  Password: <%=f.password_field :password%><br />
   <%=f.submit%>
 <%end%>
