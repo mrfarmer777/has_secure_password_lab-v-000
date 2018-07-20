@@ -1,6 +1,6 @@
 <h2>Log in</h2>
 
-<%=form_tag "login_path" do %>
+<%=form_tag login_path do %>
   User name: <%=text_field_tag :name%><br />
   Password: <%=password_field_tag :password%><br />
   <%=submit_tag%>
