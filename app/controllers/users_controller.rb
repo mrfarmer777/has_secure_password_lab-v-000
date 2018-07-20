@@ -9,4 +9,11 @@ class UsersController < ApplicationController
 
   end
 
+  prive 
+
+  #strong params function
+  def user_params
+    params.require(:user).permite(:username, :password, :password_confirmation)
+  end
+
 end
