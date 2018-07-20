@@ -10,7 +10,7 @@ class SessionsController < ApplicationController
     if @user
       #You're forbidden unless the password you supplied in the params(when salted and hashed)  matches that
       #which was previously salted and hashed for your username in the database
-      return head(:forbidden) unless @user.authenticate(params[:password])
+      return head(:forbidden) unless @user.authenticate(params[:user][:password])
       #if you passed the previous step, here's your wristband. Drink away and don't be an idiot.
       session[:user_id] = @user.id
       redirect_to user_path(@user)
