@@ -6,6 +6,7 @@ class SessionsController < ApplicationController
 
   def create
     #You said you're 'username', huh? Let's see if you're on the list...
+    
     @user=User.find_by(name: params[name])
     if @user
       #You're forbidden unless the password you supplied in the params(when salted and hashed)  matches that
