@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
   end
 
-  prive
+  private
 
   #strong params function
   def user_params
