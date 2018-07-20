@@ -9,6 +9,7 @@ class UsersController < ApplicationController
     #user, it will use the has_secure_password macro to create the password digest before actually saving it....
     #this should be baked in
     @user = User.new(user_params).save
+    session[:user_id]=@user.id
     redirect_to sess
   end
 
